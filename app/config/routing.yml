@@ -1,0 +1,5 @@
+sistema_guias:
+    resource: "@SistemaGuiasBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
