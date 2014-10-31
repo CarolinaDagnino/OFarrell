@@ -1,10 +1,11 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: "@MWSimpleAdminCrudBundle/Resources/config/services.yml" }
 
 framework:
     #esi:             ~
-    #translator:      { fallback: "%locale%" }
+    translator:      { fallback: "%locale%" }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -28,6 +29,9 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    form:
+            resources:
+                - LexikFormFilterBundle:Form:form_div_layout.html.twig
 
 # Assetic Configuration
 assetic:
@@ -70,3 +74,77 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+fos_user:
+    # tipo de ORM/ODB que utilizas (también puede ser 'mongodb', 'couchdb' y 'propel')
+    db_driver:     orm
+    # el nombre de tu firewall
+    firewall_name: main
+    # el namespace de tu clase 'User' específica
+    user_class:    Sistema\GuiasBundle\Entity\User
+
+knp_paginator:
+    page_range: 10
+    default_options:
+        page_name: page
+        sort_field_name: sort
+        sort_direction_name: direction
+        distinct: true
+    template:
+        # pagination: KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig # bootstrap 3 sliding pagination controls template
+        pagination: MWSimpleAdminCrudBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig
+        sortable: KnpPaginatorBundle:Pagination:sortable_link.html.twig
+
+#services:
+##ACL manager
+#    mws_acl_manager:
+#        class: MWSimple\Bundle\AdminCrudBundle\Services\ACLManager
+#        arguments:
+#            - "@service_container"
+##Listener delete ACL PostRemove
+#    mws_acl_listener:
+#        class: MWSimple\Bundle\AdminCrudBundle\EventListener\ACLListener
+#        arguments:
+#            - "@service_container"
+#        tags:
+#            - { name: doctrine.event_listener, event: preRemove }
+#
+mw_simple_admin_crud:
+#    menu:
+#        inicio: { name: inicio, url: mws_admin_crud_menu }
+##        administrar: { name: admnistrar, url: mws_admin_crud_menu }
+#        provincia: { name: provincia, url: admin_provincia }
+#        localidad: { name: localidad, url: admin_localidad }
+#        persona: { name: persona, url: admin_persona }
+#        campo: { name: campo, url: admin_campo }
+#        categoria: { name: categoria, url: admin_categoria }
+#        finalidad: { name: finalidad, url: admin_finalidad }
+#        guia: { name: guia, url: admin_guia }
+    menu:
+        inicio: { name: inicio, url: mws_admin_crud_menu }
+        provincia: { name: provincia, url: admin_provincia }
+        localidad: { name: localidad, url: admin_localidad }
+        persona: { name: persona, url: admin_persona }
+        campo: { name: campo, url: admin_campo }
+        categoria: { name: categoria, url: admin_categoria }
+        finalidad: { name: finalidad, url: admin_finalidad }
+        guia: { name: guia, url: admin_guia }
+##...
+#    acl:
+#        use: true
+##entities use
+#        entities:
+#            - Sistema\GuiasBundle\Entity\Provincia
+
+ps_pdf:
+    nodes_file: ~
+    fonts_file: ~
+    complex_attributes_file: ~
+    colors_file: ~
+    use_cache_in_stylesheet: ~
+    cache:
+      type: ~
+      options: ~
+    markdown_stylesheet_filepath: ~
+    markdown_document_template_filepath: ~
+    document_parser_type: ~

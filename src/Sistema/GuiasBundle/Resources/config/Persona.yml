@@ -1,0 +1,53 @@
+entityName: 'Persona'
+entity: 'Sistema\GuiasBundle\Entity\Persona'
+repository: 'SistemaGuiasBundle:Persona'
+index: 'admin_persona'
+new: 'admin_persona_new'
+edit: 'admin_persona_edit'
+show: 'admin_persona_show'
+create: 'admin_persona_create'
+update: 'admin_persona_update'
+delete: 'admin_persona_delete'
+sessionFilter: 'PersonaControllerFilter'
+fieldsindex:    
+#    a.id:
+#        label: 'Id'
+#        name: 'Id'
+#        type: 'integer'    
+    a.nya:
+        label: 'Nya'
+        name: 'Nya'
+        type: 'string'    
+    a.cuit:
+        label: 'Cuit'
+        name: 'Cuit'
+        type: 'string'    
+    a.domicilio:
+        label: 'Domicilio'
+        name: 'Domicilio'
+        type: 'string'
+fieldsshow:
+#    a.id:
+#        label: 'Id'
+#        name: 'Id'
+#        type: 'integer'
+    a.nya:
+        label: 'Nya'
+        name: 'Nya'
+        type: 'string'
+    a.cuit:
+        label: 'Cuit'
+        name: 'Cuit'
+        type: 'string'
+    a.domicilio:
+        label: 'Domicilio'
+        name: 'Domicilio'
+        type: 'string'
+#    a.campos:
+#        label: 'Campos'
+#        name: 'Campos'
+#        type: 'ONE_TO_MANY'
+#    a.guias:
+#        label: 'Guias'
+#        name: 'Guias'
+#        type: 'ONE_TO_MANY'

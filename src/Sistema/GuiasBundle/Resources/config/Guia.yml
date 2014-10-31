@@ -1,0 +1,64 @@
+entityName: 'Guia'
+entity: 'Sistema\GuiasBundle\Entity\Guia'
+repository: 'SistemaGuiasBundle:Guia'
+index: 'admin_guia'
+new: 'admin_guia_new'
+edit: 'admin_guia_edit'
+show: 'admin_guia_show'
+create: 'admin_guia_create'
+update: 'admin_guia_update'
+delete: 'admin_guia_delete'
+pdf: 'admin_guia_pdf'
+sessionFilter: 'GuiaControllerFilter'
+fieldsindex:    
+#    a.id:
+#        label: 'Id'
+#        name: 'Id'
+#        type: 'integer'    
+    a.fecha:
+        label: 'Fecha'
+        name: 'Fecha'
+        type: 'date'
+        date: 'Y-m-d'    
+    a.solamarca:
+        label: 'Solamarca'
+        name: 'Solamarca'
+        type: 'boolean'
+    a.persona:
+        label: 'Persona'
+        name: 'Persona'
+        type: 'MANY_TO_ONE'
+    a.finalidad:
+        label: 'Finalidad'
+        name: 'Finalidad'
+        type: 'MANY_TO_ONE'
+    a.campo:
+        label: 'Campo'
+        name: 'Campo'
+        type: 'MANY_TO_ONE'
+fieldsshow:
+#    a.id:
+#        label: 'Id'
+#        name: 'Id'
+#        type: 'integer'
+    a.fecha:
+        label: 'Fecha'
+        name: 'Fecha'
+        type: 'date'
+        date: 'Y-m-d'
+    a.solamarca:
+        label: 'Solamarca'
+        name: 'Solamarca'
+        type: 'boolean'
+    a.persona:
+        label: 'Persona'
+        name: 'Persona'
+        type: 'MANY_TO_ONE'
+    a.finalidad:
+        label: 'Finalidad'
+        name: 'Finalidad'
+        type: 'MANY_TO_ONE'
+    a.campo:
+        label: 'Campo'
+        name: 'Campo'
+        type: 'MANY_TO_ONE'

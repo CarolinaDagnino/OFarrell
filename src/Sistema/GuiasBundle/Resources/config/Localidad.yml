@@ -1,0 +1,41 @@
+entityName: 'Localidad'
+entity: 'Sistema\GuiasBundle\Entity\Localidad'
+repository: 'SistemaGuiasBundle:Localidad'
+index: 'admin_localidad'
+new: 'admin_localidad_new'
+edit: 'admin_localidad_edit'
+show: 'admin_localidad_show'
+create: 'admin_localidad_create'
+update: 'admin_localidad_update'
+delete: 'admin_localidad_delete'
+sessionFilter: 'LocalidadControllerFilter'
+fieldsindex:    
+#    a.id:
+#        label: 'Id'
+#        name: 'Id'
+#        type: 'integer'    
+    a.nombre:
+        label: 'Nombre'
+        name: 'Nombre'
+        type: 'string'
+    a.provincia:
+        label: 'Provincia'
+        name: 'Provincia'
+        type: 'MANY_TO_ONE'
+fieldsshow:
+#    a.id:
+#        label: 'Id'
+#        name: 'Id'
+#        type: 'integer'
+    a.nombre:
+        label: 'Nombre'
+        name: 'Nombre'
+        type: 'string'
+    a.provincia:
+        label: 'Provincia'
+        name: 'Provincia'
+        type: 'MANY_TO_ONE'
+    a.campos:
+        label: 'Campos'
+        name: 'Campos'
+        type: 'ONE_TO_MANY'

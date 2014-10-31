@@ -1,0 +1,33 @@
+entityName: 'Provincia'
+entity: 'Sistema\GuiasBundle\Entity\Provincia'
+repository: 'SistemaGuiasBundle:Provincia'
+index: 'admin_provincia'
+new: 'admin_provincia_new'
+edit: 'admin_provincia_edit'
+show: 'admin_provincia_show'
+create: 'admin_provincia_create'
+update: 'admin_provincia_update'
+delete: 'admin_provincia_delete'
+sessionFilter: 'ProvinciaControllerFilter'
+fieldsindex:    
+#    a.id:
+#        label: 'Id'
+#        name: 'Id'
+#        type: 'integer'    
+    a.nombre:
+        label: 'Nombre'
+        name: 'Nombre'
+        type: 'string'
+fieldsshow:
+#    a.id:
+#        label: 'Id'
+#        name: 'Id'
+#        type: 'integer'
+    a.nombre:
+        label: 'Nombre'
+        name: 'Nombre'
+        type: 'string'
+    a.localidades:
+        label: 'Localidades'
+        name: 'Localidades'
+        type: 'ONE_TO_MANY'

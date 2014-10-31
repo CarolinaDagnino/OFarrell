@@ -1,0 +1,45 @@
+entityName: 'CategoriaGuia'
+entity: 'Sistema\GuiasBundle\Entity\CategoriaGuia'
+repository: 'SistemaGuiasBundle:CategoriaGuia'
+index: 'admin_categoriaguia'
+new: 'admin_categoriaguia_new'
+edit: 'admin_categoriaguia_edit'
+show: 'admin_categoriaguia_show'
+create: 'admin_categoriaguia_create'
+update: 'admin_categoriaguia_update'
+delete: 'admin_categoriaguia_delete'
+sessionFilter: 'CategoriaGuiaControllerFilter'
+fieldsindex:    
+    a.id:
+        label: 'Id'
+        name: 'Id'
+        type: 'integer'    
+    a.cantidad:
+        label: 'Cantidad'
+        name: 'Cantidad'
+        type: 'integer'
+    a.categoria:
+        label: 'Categoria'
+        name: 'Categoria'
+        type: 'MANY_TO_ONE'
+    a.guia:
+        label: 'Guia'
+        name: 'Guia'
+        type: 'MANY_TO_ONE'
+fieldsshow:
+    a.id:
+        label: 'Id'
+        name: 'Id'
+        type: 'integer'
+    a.cantidad:
+        label: 'Cantidad'
+        name: 'Cantidad'
+        type: 'integer'
+    a.categoria:
+        label: 'Categoria'
+        name: 'Categoria'
+        type: 'MANY_TO_ONE'
+    a.guia:
+        label: 'Guia'
+        name: 'Guia'
+        type: 'MANY_TO_ONE'

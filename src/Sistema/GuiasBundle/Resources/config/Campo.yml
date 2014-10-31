@@ -1,0 +1,69 @@
+entityName: 'Campo'
+entity: 'Sistema\GuiasBundle\Entity\Campo'
+repository: 'SistemaGuiasBundle:Campo'
+index: 'admin_campo'
+new: 'admin_campo_new'
+edit: 'admin_campo_edit'
+show: 'admin_campo_show'
+create: 'admin_campo_create'
+update: 'admin_campo_update'
+delete: 'admin_campo_delete'
+sessionFilter: 'CampoControllerFilter'
+fieldsindex:    
+#    a.id:
+#        label: 'Id'
+#        name: 'Id'
+#        type: 'integer'    
+    a.nombre:
+        label: 'Nombre'
+        name: 'Nombre'
+        type: 'string'    
+    a.descripcion:
+        label: 'Descripcion'
+        name: 'Descripcion'
+        type: 'string'    
+#    a.marca:
+#        label: 'Marca'
+#        name: 'Marca'
+#        type: 'mws_field_file'
+    a.localidad:
+        label: 'Localidad'
+        name: 'Localidad'
+        type: 'MANY_TO_ONE'
+    a.persona:
+        label: 'Persona'
+        name: 'Persona'
+        type: 'MANY_TO_ONE'
+fieldsshow:
+#    a.id:
+#        label: 'Id'
+#        name: 'Id'
+#        type: 'integer'
+    a.nombre:
+        label: 'Nombre'
+        name: 'Nombre'
+        type: 'string'
+    a.descripcion:
+        label: 'Descripcion'
+        name: 'Descripcion'
+        type: 'string'
+    a.marca:
+        label: 'Marca'
+        name: 'Marca'
+        type: 'string'
+    a.file_path:
+        label: 'File'
+        name: 'file'
+        type: 'image'
+    a.localidad:
+        label: 'Localidad'
+        name: 'Localidad'
+        type: 'MANY_TO_ONE'
+    a.persona:
+        label: 'Persona'
+        name: 'Persona'
+        type: 'MANY_TO_ONE'
+#    a.guias:
+#        label: 'Guias'
+#        name: 'Guias'
+#        type: 'ONE_TO_MANY'
