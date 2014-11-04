@@ -61,6 +61,14 @@ class GuiaType extends AbstractType
                     'class' => "col-lg-12 col-md-12 col-sm-12 col-xs-12",
                 )
             ))
+            ->add('guiacategorias', 'collection', array(
+                'label'        => ' ',
+                'type'         => new CategoriaGuiaType(),
+                'allow_add'    => true,
+                'allow_delete' => true,
+                'by_reference' => false,
+                )
+            )
         ;
     }
     

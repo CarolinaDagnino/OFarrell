@@ -186,8 +186,8 @@ class GuiaController extends Controller
    public function pdfAction($id)
    {
 //       $format = $this->get('request')->get('_format');
-//
-//       return $this->render(sprintf('SistemaGuiasBundle:ProvinciaController:helloAction.%s.twig', $format), array(
+
+//       return $this->render(sprintf('SistemaGuiasBundle:GuiaController:pdfAction.%s.twig', $format), array(
 //           'id' => $id,
 //       ));
 //       return array('id' => $id);
@@ -196,9 +196,10 @@ class GuiaController extends Controller
 
        $entity = $em->getRepository($config['repository'])->find($id);
        
-//       $nombre = $entity->getNombre();
-//       
+//       $id = $entity->getFecha();
+       return array('entity' => $entity);
+////       
 //       return array('nombre' => $nombre);
-       return $entity;
+////       return $entity;
    }
 }

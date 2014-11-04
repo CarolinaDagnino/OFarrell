@@ -33,7 +33,7 @@ class Guia
     /**
      * @var boolean
      *
-     * @ORM\Column(name="solamarca", type="boolean")
+     * @ORM\Column(name="solamarca", type="boolean", nullable=true)
      */
     private $solamarca;
     
