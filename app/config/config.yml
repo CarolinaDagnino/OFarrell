@@ -149,3 +149,8 @@ ps_pdf:
     markdown_stylesheet_filepath: ~
     markdown_document_template_filepath: ~
     document_parser_type: ~
+
+raul_fraile_ladybug:
+    theme: modern
+    expanded: false
+    silenced: false

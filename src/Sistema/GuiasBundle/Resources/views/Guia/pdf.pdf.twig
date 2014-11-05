@@ -18,9 +18,19 @@
                     </td>
                     <td>
                         <div>
-                            comprador
+                            persona
                         </div>
                     </td>
+                    <td>
+                        <div>
+                            finalidad
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            comprador
+                        </div>
+                    </td>                    
                 </tr>
                 <tr>
                     <td>
@@ -30,12 +40,22 @@
                     </td>
                     <td>
                         <div>
-                            {{ entity.fecha }}
+                            {{ entity.fecha|date("d/m/Y") }}
                         </div>
                     </td>
                     <td>
                         <div>
-                            {{ entity.comprador }}
+                            {{ entity.persona }}
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            {{ entity.finalidad }}
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            {{ entity.campo }}
                         </div>
                     </td>
                 </tr>

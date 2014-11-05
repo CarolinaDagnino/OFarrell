@@ -19,14 +19,15 @@ class GuiaType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('fecha', 'bootstrapdatetime', array(
-                'required'   => true,
-                'label'      => 'Fecha',
-                'label_attr' => array(
-                    'class' => 'col-lg-2 col-md-2 col-sm-2',
-                ),
-                'widget_type' => 'date',
-            ))
+//            ->add('fecha', 'bootstrapdatetime', array(
+//                'required'   => true,
+//                'label'      => 'Fecha',
+//                'label_attr' => array(
+//                    'class' => 'col-lg-2 col-md-2 col-sm-2',
+//                ),
+//                'widget_type' => 'date',
+//            ))
+                ->add('fecha')
             ->add('solamarca')
             ->add('persona', 'select2', array(
                 'class' => 'Sistema\GuiasBundle\Entity\Persona',
@@ -66,7 +67,7 @@ class GuiaType extends AbstractType
                 'type'         => new CategoriaGuiaType(),
                 'allow_add'    => true,
                 'allow_delete' => true,
-                'by_reference' => false,
+                'by_reference' => true,
                 )
             )
         ;

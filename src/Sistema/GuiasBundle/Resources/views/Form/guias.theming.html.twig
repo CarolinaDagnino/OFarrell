@@ -1,12 +1,12 @@
 {# El nombre del widget es el que devuelve el método getName() del form #}
 {% block sistema_guiasbundle_guia_widget %}
 {% import "SistemaGuiasBundle:Form:macro.categoria.html.twig" as macrosTelefono %}
-<div class="row">
+{% form_theme form 'MWSimpleAdminCrudBundle:widget:fields.html.twig' %}
+<div class="input-group"> 
     <div class="span6">
         {{ form_row(form.fecha) }}
     </div>
-</div>
-<div class="input-group"> 
+
     <div class="span6">
         {{ form_row(form.solamarca) }}
     </div>

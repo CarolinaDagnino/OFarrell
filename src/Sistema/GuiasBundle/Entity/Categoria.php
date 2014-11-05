@@ -106,10 +106,10 @@ class Categoria
     /**
      * Add categoriaguias
      *
-     * @param \Sistema\GuiasBundle\Entity\Categoria_x_Guia $categoriaguias
+     * @param \Sistema\GuiasBundle\Entity\CategoriaGuia $categoriaguias
      * @return Categoria
      */
-    public function addCategoriaguia(\Sistema\GuiasBundle\Entity\Categoria_x_Guia $categoriaguias)
+    public function addCategoriaguia(\Sistema\GuiasBundle\Entity\CategoriaGuia $categoriaguias)
     {
         $this->categoriaguias[] = $categoriaguias;
 
@@ -119,9 +119,9 @@ class Categoria
     /**
      * Remove categoriaguias
      *
-     * @param \Sistema\GuiasBundle\Entity\Categoria_x_Guia $categoriaguias
+     * @param \Sistema\GuiasBundle\Entity\CategoriaGuia $categoriaguias
      */
-    public function removeCategoriaguia(\Sistema\GuiasBundle\Entity\Categoria_x_Guia $categoriaguias)
+    public function removeCategoriaguia(\Sistema\GuiasBundle\Entity\CategoriaGuia $categoriaguias)
     {
         $this->categoriaguias->removeElement($categoriaguias);
     }

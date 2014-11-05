@@ -18,8 +18,8 @@ fieldsindex:
     a.fecha:
         label: 'Fecha'
         name: 'Fecha'
-        type: 'date'
-        date: 'Y-m-d'    
+        type: 'datetime'
+        date: 'd-m-Y'    
     a.solamarca:
         label: 'Solamarca'
         name: 'Solamarca'
