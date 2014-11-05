@@ -22,7 +22,7 @@ class AppKernel extends Kernel
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Lexik\Bundle\FormFilterBundle\LexikFormFilterBundle(),
-            new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
+             new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
             new Ps\PdfBundle\PsPdfBundle(),
         );
 
