@@ -1,5 +1,99 @@
 <pdf>
     <dynamic-page>
-        Hola esto es el {{ entity }}!
+        <div width="100%" height="100%">
+            <stylesheet>
+                <complex-attribute name="border" color="green" />
+            </stylesheet>
+            <table>
+                <tr>
+                    <td>
+                        <div>
+                            id
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            fecha
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            persona
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            finalidad
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            comprador
+                        </div>
+                    </td>                    
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                             {{ entity.id }}
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            {{ entity.fecha|date("d/m/Y") }}
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            {{ entity.persona }}
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            {{ entity.finalidad }}
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            {{ entity.campo }}
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                        </div>
+                    </td>
+                    <td colspan="2">
+                        <div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="legend">
+                <h2>Legend:</h2>
+                <p>
+                    <div class="square pink"></div>
+                    <p class="desc">Background of div within td</p>
+                </p>
+                <p>
+                    <div class="square white"></div>
+                    <p class="desc">Margin between td and div</p>
+                </p>
+                <p>
+                    <div class="square yellow"></div>
+                    <p class="desc">Table background</p>
+                </p>
+                <p>
+                    <div class="square red"></div>
+                    <p class="desc">Td border</p>
+                </p>
+                <p>
+                    <div class="square blue"></div>
+                    <p class="desc">Tr border ddd</p>
+                </p>
+            </div>
+        </div>
     </dynamic-page>
 </pdf>

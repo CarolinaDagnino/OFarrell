@@ -31,17 +31,17 @@ class CategoriaGuiaType extends AbstractType
                     'class' => "col-lg-12 col-md-12 col-sm-12 col-xs-12",
                 )
             ))
-            ->add('guia', 'select2', array(
-                'class' => 'Sistema\GuiasBundle\Entity\Guia',
-                'url'   => 'CategoriaGuia_autocomplete_guia',
-                'configs' => array(
-                    'multiple' => false,//required true or false
-                    'width'    => 'off',
-                ),
-                'attr' => array(
-                    'class' => "col-lg-12 col-md-12 col-sm-12 col-xs-12",
-                )
-            ))
+//            ->add('guia', 'select2', array(
+//                'class' => 'Sistema\GuiasBundle\Entity\Guia',
+//                'url'   => 'CategoriaGuia_autocomplete_guia',
+//                'configs' => array(
+//                    'multiple' => false,//required true or false
+//                    'width'    => 'off',
+//                ),
+//                'attr' => array(
+//                    'class' => "col-lg-12 col-md-12 col-sm-12 col-xs-12",
+//                )
+//            ))
         ;
     }
     

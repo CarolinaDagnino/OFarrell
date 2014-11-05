@@ -33,7 +33,7 @@ class CategoriaGuia
      */
     protected $categoria;
     /**
-     * @ORM\ManyToOne(targetEntity="Guia", inversedBy="guiacategorias")
+     * @ORM\ManyToOne(targetEntity="Guia", inversedBy="guiacategorias",cascade={"persist"})
      * @ORM\JoinColumn(name="guia_id", referencedColumnName="id")
      */
     protected $guia;
@@ -114,5 +114,9 @@ class CategoriaGuia
     public function getGuia()
     {
         return $this->guia;
+    }
+    
+    public function __toString() {
+        return $this->categoria.'-'.$this->id;
     }
 }

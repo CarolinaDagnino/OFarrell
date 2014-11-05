@@ -1,0 +1,15 @@
+{% macro categorias(form) %}
+    <div class="row-fluid">
+        <div class="input-group"> 
+            <div class="span4">
+                {{ form_row(form.categoria) }}
+            </div>
+            <div class="span4">
+                {{ form_row(form.cantidad) }}
+            </div>
+            <div class="span2">
+                <a class='delete-form btn btn-mini btn-danger' href='#'><i class='icon-remove-circle'></i>Remover Categoria </a>
+            </div>
+        </div>
+    </div>
+{% endmacro %}

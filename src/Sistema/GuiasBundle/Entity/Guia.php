@@ -26,14 +26,14 @@ class Guia
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="fecha", type="date")
+     * @ORM\Column(name="fecha", type="date", nullable=true)
      */
     private $fecha;
 
     /**
      * @var boolean
      *
-     * @ORM\Column(name="solamarca", type="boolean")
+     * @ORM\Column(name="solamarca", type="boolean", nullable=true)
      */
     private $solamarca;
     
@@ -56,7 +56,7 @@ class Guia
     protected $campo;
     
     /**
-     * @ORM\OneToMany(targetEntity="CategoriaGuia", mappedBy="guia")
+     * @ORM\OneToMany(targetEntity="CategoriaGuia", mappedBy="guia", cascade={"all"})
      */
     protected $guiacategorias;
  
@@ -194,10 +194,10 @@ class Guia
     /**
      * Add guiacategorias
      *
-     * @param \Sistema\GuiasBundle\Entity\Categoria_x_Guia $guiacategorias
+     * @param \Sistema\GuiasBundle\Entity\CategoriaGuia $guiacategorias
      * @return Guia
      */
-    public function addGuiacategoria(\Sistema\GuiasBundle\Entity\Categoria_x_Guia $guiacategorias)
+    public function addGuiacategoria(\Sistema\GuiasBundle\Entity\CategoriaGuia $guiacategorias)
     {
         $this->guiacategorias[] = $guiacategorias;
 
@@ -207,9 +207,9 @@ class Guia
     /**
      * Remove guiacategorias
      *
-     * @param \Sistema\GuiasBundle\Entity\Categoria_x_Guia $guiacategorias
+     * @param \Sistema\GuiasBundle\Entity\CategoriaGuia $guiacategorias
      */
-    public function removeGuiacategoria(\Sistema\GuiasBundle\Entity\Categoria_x_Guia $guiacategorias)
+    public function removeGuiacategoria(\Sistema\GuiasBundle\Entity\CategoriaGuia $guiacategorias)
     {
         $this->guiacategorias->removeElement($guiacategorias);
     }
