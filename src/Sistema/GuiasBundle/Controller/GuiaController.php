@@ -16,7 +16,7 @@ use Ps\PdfBundle\Annotation\Pdf;
  * Guia controller.
  * @author Nombre Apellido <name@gmail.com>
  *
- * @Route("/admin/guia")
+    * @Route("/admin/guia")
  */
 class GuiaController extends Controller
 {

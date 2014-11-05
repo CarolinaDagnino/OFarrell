@@ -1,64 +1,81 @@
 <pdf>
-    <dynamic-page>
-        <div width="100%" height="100%">
+    <dynamic-page margin="10" page-size="legal">
+        <div margin-left="6.5px">
+                <h1 font-style="normal" font-size="29px" margin-bottom="0" text-align="center">
+                      GUIA DE TRASLADO ANIMAL
+                </h1>
+            <h2 font-style="normal"  text-align="center">
+                Provincia del Chaco
+            </h2>
+        </div>
+        <div width="90%" height="100%">
             <stylesheet>
-                <complex-attribute name="border" color="green" />
+                <complex-attribute name="border" color="black" />
             </stylesheet>
+            <div float="right">
+                Fecha: {{ entity.fecha|date("d/m/Y") }} <br></br>
+                Finalidad: {{ entity.finalidad }}
+            </div>
+            <div>
+                
+                 <h1 font-style="normal" font-size="16px" margin-bottom="0" text-align="left">
+                     DATOS DEL ORIGEN
+                 </h1>
+                  <h2 font-style="normal" font-size="12px" margin-bottom="0" text-align="left">
+                     Nombre: {{ entity.persona }}<br></br>
+                     C.U.I.T.: {{ entity.persona.cuit }}<br></br>
+                     Domicilio: {{ entity.persona.domicilio }}<br></br>
+                 </h2>
+            </div>
+            <div>
+                 <h1 font-style="normal" font-size="16px" margin-bottom="0" text-align="left">
+                     DATOS DEL DESTINO
+                 </h1>
+                  <h2 font-style="normal" font-size="12px" margin-bottom="0" text-align="left">
+                     Destino: {{ entity.campo }} <br></br> 
+                     Domicilio: {{ entity.campo.localidad }} - {{ entity.campo.localidad.provincia }}<br>
+                         
+                     </br>
+                 </h2>
+            </div>
+                 <br> </br>
             <table>
+               <tr >
+                    <td>
+                        <div>
+                            Codigo
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            Categoria
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            Cantidad
+                        </div>
+                    </td>
+               </tr>
+               {% for guiacategoria in entity.guiacategorias %}
                 <tr>
                     <td>
                         <div>
-                            id
+                            {{ guiacategoria.categoria.codigo }}
                         </div>
                     </td>
                     <td>
                         <div>
-                            fecha
+                            {{ guiacategoria.categoria }}
                         </div>
                     </td>
                     <td>
                         <div>
-                            persona
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            finalidad
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            comprador
-                        </div>
-                    </td>                    
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                             {{ entity.id }}
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            {{ entity.fecha|date("d/m/Y") }}
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            {{ entity.persona }}
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            {{ entity.finalidad }}
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            {{ entity.campo }}
+                           {{ guiacategoria.cantidad }}
                         </div>
                     </td>
                 </tr>
+                {% endfor %}
                 <tr>
                     <td>
                         <div>
