@@ -1,11 +1,12 @@
 <pdf>
     <dynamic-page margin="10" page-size="legal">
+        
         <div margin-left="6.5px">
                 <h1 font-style="normal" font-size="29px" margin-bottom="0" text-align="center">
-                      GUIA DE TRASLADO ANIMAL
+                      CERTIFICADO
                 </h1>
             <h2 font-style="normal"  text-align="center">
-                Provincia del Chaco
+                VENDO - TRASLADOS - CONSUMO
             </h2>
         </div>
         <div >
@@ -19,7 +20,7 @@
             <div>
                 
                  <h1 font-style="normal" font-size="16px" margin-bottom="0" text-align="left">
-                     DATOS DEL ORIGEN
+                     DATOS DEL VENDEDOR
                  </h1>
                   <h1 font-style="normal" font-size="12px" margin-bottom="0" text-align="left">
                      Nombre: {{ entity.persona }}<br></br>
@@ -29,7 +30,7 @@
             </div>
             <div>
                  <h1 font-style="normal" font-size="16px" margin-bottom="0" text-align="left">
-                     DATOS DEL DESTINO
+                     CONSIGNADO A:
                  </h1>
                   <h1 font-style="normal" font-size="12px" margin-bottom="0" text-align="left">
                      Destino: {{ entity.campo }} <br></br> 
@@ -39,9 +40,43 @@
                      
             </div>
         </div> 
-                 <div>
-                     <br></br>
-                 </div>
+                     <div width="10px" height="50px">
+                         <br></br>
+                     </div>
+        <div >
+            <stylesheet>
+                <complex-attribute name="border" color="black" />
+            </stylesheet>
+            <div float="right">
+                Fecha: {{ entity.fecha|date("d/m/Y") }} <br></br>
+                Finalidad: {{ entity.finalidad }}
+            </div>
+            <div>
+                
+                 <h1 font-style="normal" font-size="16px" margin-bottom="0" text-align="left">
+                     DATOS DEL VENDEDOR
+                 </h1>
+                  <h1 font-style="normal" font-size="12px" margin-bottom="0" text-align="left">
+                     Nombre: {{ entity.persona }}<br></br>
+                     C.U.I.T.: {{ entity.persona.cuit }}<br></br>
+                     Domicilio: {{ entity.persona.domicilio }}<br></br>
+                 </h1>
+            </div>
+            <div>
+                 <h1 font-style="normal" font-size="16px" margin-bottom="0" text-align="left">
+                     CONSIGNADO A:
+                 </h1>
+                  <h1 font-style="normal" font-size="12px" margin-bottom="0" text-align="left">
+                     Destino: {{ entity.campo }} <br></br> 
+                     Domicilio: {{ entity.campo.localidad }} - {{ entity.campo.localidad.provincia }}<br></br>
+
+                  </h1>
+                     
+            </div>
+        </div> 
+         <div width="10px" height="10px">
+             <br></br>
+         </div>
         <div >       
             <table>
                <tr >
@@ -80,6 +115,7 @@
                     </td>
                 </tr>
                 {% endfor %}
+       
                 <tr>
                     <td>
                         <div>
@@ -92,7 +128,94 @@
                 </tr>
             </table>
         </div>
-           
+                 <div width="10px" height="50px">
+             <br></br>
+         </div>
+                <div >
+            <stylesheet>
+                <complex-attribute name="border" color="black" />
+            </stylesheet>
+            <div float="right">
+                Fecha: {{ entity.fecha|date("d/m/Y") }} <br></br>
+                Finalidad: {{ entity.finalidad }}
+            </div>
+            <div>
+                
+                 <h1 font-style="normal" font-size="16px" margin-bottom="0" text-align="left">
+                     DATOS DEL VENDEDOR
+                 </h1>
+                  <h1 font-style="normal" font-size="12px" margin-bottom="0" text-align="left">
+                     Nombre: {{ entity.persona }}<br></br>
+                     C.U.I.T.: {{ entity.persona.cuit }}<br></br>
+                     Domicilio: {{ entity.persona.domicilio }}<br></br>
+                 </h1>
+            </div>
+            <div>
+                 <h1 font-style="normal" font-size="16px" margin-bottom="0" text-align="left">
+                     CONSIGNADO A:
+                 </h1>
+                  <h1 font-style="normal" font-size="12px" margin-bottom="0" text-align="left">
+                     Destino: {{ entity.campo }} <br></br> 
+                     Domicilio: {{ entity.campo.localidad }} - {{ entity.campo.localidad.provincia }}<br></br>
+
+                  </h1>
+                     
+            </div>
+        </div> 
+         <div width="10px" height="10px">
+             <br></br>
+         </div>
+            <div >       
+            <table>
+               <tr >
+                    <td>
+                        <div font-style="normal"  font-size="12px" text-align="center">
+                            Codigo
+                        </div>
+                    </td>
+                    <td>
+                        <div font-style="normal"  font-size="12px" text-align="center">
+                            Categoria
+                        </div>
+                    </td>
+                    <td>
+                        <div font-style="normal"  font-size="12px" text-align="center">
+                            Cantidad
+                        </div>
+                    </td>
+               </tr>
+               {% for guiacategoria in entity.guiacategorias %}
+                <tr>
+                    <td>
+                        <div font-style="normal"  text-align="center">
+                            {{ guiacategoria.categoria.codigo }}
+                        </div>
+                    </td>
+                    <td>
+                        <div font-style="normal"  text-align="center">
+                            {{ guiacategoria.categoria }}
+                        </div>
+                    </td>
+                    <td>
+                        <div font-style="normal"  text-align="center">
+                           {{ guiacategoria.cantidad }}
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+       
+                <tr>
+                    <td>
+                        <div>
+                        </div>
+                    </td>
+                    <td colspan="2">
+                        <div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
         
     </dynamic-page>
 </pdf>
