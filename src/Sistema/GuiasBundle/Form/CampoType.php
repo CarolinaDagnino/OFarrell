@@ -21,7 +21,6 @@ class CampoType extends AbstractType
         $builder
             ->add('nombre')
             ->add('descripcion')
-            ->add('marca')
             ->add('file', 'mws_field_file', array(
                     'required'  => false,
                     'file_path' => 'webPath',
