@@ -33,7 +33,7 @@ class CategoriaGuia
      */
     protected $categoria;
     /**
-     * @ORM\ManyToOne(targetEntity="Guia", inversedBy="guiacategorias",cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="Guia", inversedBy="guiacategorias", cascade={"all"})
      * @ORM\JoinColumn(name="guia_id", referencedColumnName="id")
      */
     protected $guia;
@@ -117,6 +117,20 @@ class CategoriaGuia
     }
     
     public function __toString() {
-        return $this->categoria.'-'.$this->id;
+        return $this->categoria.' - Cantidad: '.$this->cantidad;
+    }
+    
+    /**
+     * Add guia
+     *
+     * @param \Sistema\GuiasBundle\Entity\Guia $guia
+     * @return Guia
+     */
+    public function addGuia(\Sistema\GuiasBundle\Entity\Guia $guia)
+    {
+//        if (!$this->guia->contains($guia)) {
+            $this->guia= $guia;
+//        }
+          return $this;
     }
 }

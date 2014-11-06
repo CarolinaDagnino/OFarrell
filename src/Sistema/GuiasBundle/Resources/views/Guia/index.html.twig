@@ -47,6 +47,12 @@
                         <td>
                         {% if field.type in ['datetime', 'datetimetz', 'date', 'time'] %}
                             {{ attribute(entity, field.name)|date(field.date) }}
+                        {% elseif field.type in ['boolean'] %}
+                            {% if field.name not in [1] %}
+                                {{ attribute(entity, field.name)|default('NO') }}
+                             {% else %}
+                                 {{ attribute(entity, field.name)|default('SI') }}
+                            {% endif %}
                         {% else %}
                             {{ attribute(entity, field.name) }}
                         {% endif %}

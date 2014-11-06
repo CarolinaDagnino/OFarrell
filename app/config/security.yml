@@ -22,7 +22,14 @@ security:
             form_login:
                 provider: fos_userbundle
                 csrf_provider: form.csrf_provider
-            logout:       true
+                login_path: /login
+                check_path: /login_check
+#                logout_path: /login
+                always_use_default_target_path: false
+                default_target_path: /admin/guia/new
+            logout:
+                path:   /logout
+                target: /login
             anonymous:    true
 
         dev:

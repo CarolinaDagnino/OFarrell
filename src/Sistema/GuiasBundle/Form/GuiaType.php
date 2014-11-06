@@ -27,9 +27,10 @@ class GuiaType extends AbstractType
 //                ),
 //                'widget_type' => 'date',
 //            ))
-                ->add('fecha')
+            ->add('fecha')
             ->add('solamarca')
             ->add('persona', 'select2', array(
+                'label'      => 'Persona/Origen',
                 'class' => 'Sistema\GuiasBundle\Entity\Persona',
                 'url'   => 'Guia_autocomplete_persona',
                 'configs' => array(
@@ -67,7 +68,7 @@ class GuiaType extends AbstractType
                 'type'         => new CategoriaGuiaType(),
                 'allow_add'    => true,
                 'allow_delete' => true,
-                'by_reference' => true,
+                'by_reference' => false,
                 )
             )
         ;

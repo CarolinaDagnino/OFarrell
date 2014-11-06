@@ -122,14 +122,15 @@ mw_simple_admin_crud:
 #        finalidad: { name: finalidad, url: admin_finalidad }
 #        guia: { name: guia, url: admin_guia }
     menu:
-        inicio: { name: inicio, url: mws_admin_crud_menu }
-        provincia: { name: provincia, url: admin_provincia }
-        localidad: { name: localidad, url: admin_localidad }
-        persona: { name: persona, url: admin_persona }
-        campo: { name: campo, url: admin_campo }
-        categoria: { name: categoria, url: admin_categoria }
-        finalidad: { name: finalidad, url: admin_finalidad }
-        guia: { name: guia, url: admin_guia }
+        inicio: { name: Inicio, url: mws_admin_crud_menu }
+        provincia: { name: Provincias, url: admin_provincia }
+        localidad: { name: Localidades, url: admin_localidad }
+        persona: { name: Personas, url: admin_persona }
+        campo: { name: Campos, url: admin_campo }
+        categoria: { name: Categorias, url: admin_categoria }
+        finalidad: { name: Finalidades, url: admin_finalidad }
+        guia: { name: Guias, url: admin_guia }
+#        salir: { name: Salir, url: fos_user_login }
 ##...
 #    acl:
 #        use: true

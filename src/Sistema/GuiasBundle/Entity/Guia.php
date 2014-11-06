@@ -199,6 +199,8 @@ class Guia
      */
     public function addGuiacategoria(\Sistema\GuiasBundle\Entity\CategoriaGuia $guiacategorias)
     {
+        $guiacategorias->addGuia($this);
+        
         $this->guiacategorias[] = $guiacategorias;
 
         return $this;

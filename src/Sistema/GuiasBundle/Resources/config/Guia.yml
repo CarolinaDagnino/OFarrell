@@ -25,7 +25,7 @@ fieldsindex:
         name: 'Solamarca'
         type: 'boolean'
     a.persona:
-        label: 'Persona'
+        label: 'Persona/Origen'
         name: 'Persona'
         type: 'MANY_TO_ONE'
     a.finalidad:
@@ -33,7 +33,7 @@ fieldsindex:
         name: 'Finalidad'
         type: 'MANY_TO_ONE'
     a.campo:
-        label: 'Campo'
+        label: 'Campo/Destino'
         name: 'Campo'
         type: 'MANY_TO_ONE'
 fieldsshow:
@@ -45,13 +45,13 @@ fieldsshow:
         label: 'Fecha'
         name: 'Fecha'
         type: 'date'
-        date: 'Y-m-d'
+        date: 'd-m-Y'
     a.solamarca:
         label: 'Solamarca'
         name: 'Solamarca'
-        type: 'boolean'
+        type: 'checkbox'
     a.persona:
-        label: 'Persona'
+        label: 'Persona/Origen'
         name: 'Persona'
         type: 'MANY_TO_ONE'
     a.finalidad:
@@ -59,6 +59,10 @@ fieldsshow:
         name: 'Finalidad'
         type: 'MANY_TO_ONE'
     a.campo:
-        label: 'Campo'
+        label: 'Campo/Destino'
         name: 'Campo'
         type: 'MANY_TO_ONE'
+    a.guiacategorias:
+        label: 'Categorias'
+        name: 'guiacategorias'
+        type: 'MANY_TO_MANY'
