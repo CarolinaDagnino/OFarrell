@@ -3,8 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/xampp/htdocs/OFarrell/src/Sistema/GuiasBundle/Entity/Guia.php</file>
             <file>file:/C:/xampp/htdocs/OFarrell/src/Sistema/GuiasBundle/Entity/Categoria_x_Guia.php</file>
+=======
+            <file>file:/C:/xampp/htdocs/OFarrell/src/Sistema/GuiasBundle/Resources/views/Guia/pdf.pdf.twig</file>
+>>>>>>> 9aaebe9b15a26364767aa7009eb67e117843a080
         </group>
     </open-files>
 </project-private>
