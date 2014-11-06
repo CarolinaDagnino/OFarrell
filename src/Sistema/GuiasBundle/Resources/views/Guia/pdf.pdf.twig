@@ -8,7 +8,7 @@
                 Provincia del Chaco
             </h2>
         </div>
-        <div width="90%" height="100%">
+        <div >
             <stylesheet>
                 <complex-attribute name="border" color="black" />
             </stylesheet>
@@ -21,38 +21,42 @@
                  <h1 font-style="normal" font-size="16px" margin-bottom="0" text-align="left">
                      DATOS DEL ORIGEN
                  </h1>
-                  <h2 font-style="normal" font-size="12px" margin-bottom="0" text-align="left">
+                  <h1 font-style="normal" font-size="12px" margin-bottom="0" text-align="left">
                      Nombre: {{ entity.persona }}<br></br>
                      C.U.I.T.: {{ entity.persona.cuit }}<br></br>
                      Domicilio: {{ entity.persona.domicilio }}<br></br>
-                 </h2>
+                 </h1>
             </div>
             <div>
                  <h1 font-style="normal" font-size="16px" margin-bottom="0" text-align="left">
                      DATOS DEL DESTINO
                  </h1>
-                  <h2 font-style="normal" font-size="12px" margin-bottom="0" text-align="left">
+                  <h1 font-style="normal" font-size="12px" margin-bottom="0" text-align="left">
                      Destino: {{ entity.campo }} <br></br> 
-                     Domicilio: {{ entity.campo.localidad }} - {{ entity.campo.localidad.provincia }}<br>
-                         
-                     </br>
-                 </h2>
+                     Domicilio: {{ entity.campo.localidad }} - {{ entity.campo.localidad.provincia }}<br></br>
+
+                  </h1>
+                     
             </div>
-                 <br> </br>
+        </div> 
+                 <div>
+                     <br></br>
+                 </div>
+        <div >       
             <table>
                <tr >
                     <td>
-                        <div>
+                        <div font-style="normal"  font-size="12px" text-align="center">
                             Codigo
                         </div>
                     </td>
                     <td>
-                        <div>
+                        <div font-style="normal"  font-size="12px" text-align="center">
                             Categoria
                         </div>
                     </td>
                     <td>
-                        <div>
+                        <div font-style="normal"  font-size="12px" text-align="center">
                             Cantidad
                         </div>
                     </td>
@@ -60,17 +64,17 @@
                {% for guiacategoria in entity.guiacategorias %}
                 <tr>
                     <td>
-                        <div>
+                        <div font-style="normal"  text-align="center">
                             {{ guiacategoria.categoria.codigo }}
                         </div>
                     </td>
                     <td>
-                        <div>
+                        <div font-style="normal"  text-align="center">
                             {{ guiacategoria.categoria }}
                         </div>
                     </td>
                     <td>
-                        <div>
+                        <div font-style="normal"  text-align="center">
                            {{ guiacategoria.cantidad }}
                         </div>
                     </td>
@@ -87,30 +91,8 @@
                     </td>
                 </tr>
             </table>
-
-            <div class="legend">
-                <h2>Legend:</h2>
-                <p>
-                    <div class="square pink"></div>
-                    <p class="desc">Background of div within td</p>
-                </p>
-                <p>
-                    <div class="square white"></div>
-                    <p class="desc">Margin between td and div</p>
-                </p>
-                <p>
-                    <div class="square yellow"></div>
-                    <p class="desc">Table background</p>
-                </p>
-                <p>
-                    <div class="square red"></div>
-                    <p class="desc">Td border</p>
-                </p>
-                <p>
-                    <div class="square blue"></div>
-                    <p class="desc">Tr border ddd</p>
-                </p>
-            </div>
         </div>
+           
+        
     </dynamic-page>
 </pdf>
